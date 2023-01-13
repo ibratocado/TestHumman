@@ -1,0 +1,14 @@
+C:\Users\Admin\Documents\Repos\TestHummanAcces\TestsBack\ModelTest\bin\Debug\net6.0\ModelTest.deps.json
+C:\Users\Admin\Documents\Repos\TestHummanAcces\TestsBack\ModelTest\bin\Debug\net6.0\ModelTest.dll
+C:\Users\Admin\Documents\Repos\TestHummanAcces\TestsBack\ModelTest\bin\Debug\net6.0\ref\ModelTest.dll
+C:\Users\Admin\Documents\Repos\TestHummanAcces\TestsBack\ModelTest\bin\Debug\net6.0\ModelTest.pdb
+C:\Users\Admin\Documents\Repos\TestHummanAcces\TestsBack\ModelTest\obj\Debug\net6.0\ModelTest.csproj.AssemblyReference.cache
+C:\Users\Admin\Documents\Repos\TestHummanAcces\TestsBack\ModelTest\obj\Debug\net6.0\ModelTest.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Admin\Documents\Repos\TestHummanAcces\TestsBack\ModelTest\obj\Debug\net6.0\ModelTest.AssemblyInfoInputs.cache
+C:\Users\Admin\Documents\Repos\TestHummanAcces\TestsBack\ModelTest\obj\Debug\net6.0\ModelTest.AssemblyInfo.cs
+C:\Users\Admin\Documents\Repos\TestHummanAcces\TestsBack\ModelTest\obj\Debug\net6.0\ModelTest.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Documents\Repos\TestHummanAcces\TestsBack\ModelTest\obj\Debug\net6.0\ModelTest.dll
+C:\Users\Admin\Documents\Repos\TestHummanAcces\TestsBack\ModelTest\obj\Debug\net6.0\ref\ModelTest.dll
+C:\Users\Admin\Documents\Repos\TestHummanAcces\TestsBack\ModelTest\obj\Debug\net6.0\ModelTest.pdb
+C:\Users\Admin\Documents\Repos\TestHummanAcces\TestsBack\ModelTest\bin\Debug\net6.0\ModelTest.runtimeconfig.json
+C:\Users\Admin\Documents\Repos\TestHummanAcces\TestsBack\ModelTest\obj\Debug\net6.0\ModelTest.genruntimeconfig.cache
