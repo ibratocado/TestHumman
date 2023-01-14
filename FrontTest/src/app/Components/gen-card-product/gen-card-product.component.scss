@@ -1,0 +1,34 @@
+.matcard-style{
+  max-width: 250px;
+  min-width: 200px;
+  max-height: auto;
+}
+
+.footer-style{
+  display: grid;
+  align-items: center;
+  grid-gap: 15px;
+  margin-inline: auto;
+  margin-bottom: auto;
+}
+
+.content-style{
+  display: flex;
+  justify-content: center;
+}
+
+.img-style{
+  width: 100%;
+  min-width: 180px;
+}
+
+.link-style{
+  color: black;
+  text-decoration: none;
+}
+
+.link-style:hover{
+  color: rgb(95, 110, 196);
+  cursor: pointer;
+  text-decoration: underline;
+}

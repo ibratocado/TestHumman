@@ -1,0 +1,30 @@
+.content-login{
+  display: grid;
+  justify-content: center;
+}
+
+.card-style{
+  display: grid; height: 300px; width: 200px;
+}
+
+.container-card-content{
+  display: grid;
+  justify-content: center;
+  text-align: center;
+}
+
+.container-card-footer{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5px;
+}
+
+.link-style{
+  cursor: pointer;
+  color: red;
+}
+
+.link-style:hover{
+  color: blue;
+  text-decoration: underline;
+}

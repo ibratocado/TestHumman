@@ -1,0 +1,27 @@
+<div class="content-login">
+  <mat-card class="card-style">
+    <mat-card-header>
+      <mat-card-title>Loggin</mat-card-title>
+    </mat-card-header>
+    <mat-card-content class="container-card-content">
+      <form [formGroup]="formCount">
+        <mat-form-field appearance="fill" style="width: 170px;">
+          <mat-label>E-mail</mat-label>
+          <input matInput formControlName="count" placeholder="email@example.com" required>
+          <mat-error *ngIf="formCount.controls['count'].hasError('required')">Obligatorio</mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill" style="width: 170px;">
+          <mat-label>Password</mat-label>
+          <input matInput placeholder="*********" required formControlName="pount">
+          <mat-error *ngIf="formCount.controls['pount'].hasError('required')">Obligatorio</mat-error>
+        </mat-form-field>
+      </form>
+
+    </mat-card-content>
+    <mat-card-footer class="container-card-footer">
+      <button mat-button color="primary">Login</button>
+      <button mat-button color="accent">Crear Cuenta</button>
+    </mat-card-footer>
+  </mat-card>
+</div>
