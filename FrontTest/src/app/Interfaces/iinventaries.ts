@@ -34,11 +34,13 @@ export interface IInventariesData{
 export interface IArticleRespon {
   status: number;
   message: string;
-  data: IArticlesData[];
+  data: IArticlesData;
 }
 
 export interface IArticlesData {
   id: number;
+  store: number;
+  inventaryId: number;
   description: string;
   price: number;
   image: string;

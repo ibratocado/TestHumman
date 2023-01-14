@@ -1,37 +1,5 @@
-.content-menu{
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-}
-
-.content-end{
+.container{
   display: flex;
-  justify-content: end;
-}
-
-.content-start{
-  display: flex;
-  justify-content: flex-start;
+  gap: 10px;
   align-items: center;
-}
-
-.content-options{
-  display: inline;
-}
-
-.example-spacer {
-  flex: 1 1 auto;
-}
-
-.button-style{
-  margin-left: 10px;
-  margin-right: 10px;
-  height: auto;
-}
-
-.button-style:hover{
-  background-color: #5b379b;
-}
-
-.button-style:focus{
-  background-color: #5b379b
 }

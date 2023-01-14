@@ -11,7 +11,7 @@ export class ArticlesService {
 
   constructor(private baseService: GenericService) { }
 
-  public GetAllArticles(): Promise<IResponGenericData<IArticleRespon>>{
-    return this.baseService.get(environment.url.articles);
+  public GetAllArticles(req: number): Promise<IResponGenericData<IArticleRespon>>{
+    return this.baseService.get(environment.url.articles+"?id="+req);
   }
 }

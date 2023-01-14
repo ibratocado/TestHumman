@@ -15,8 +15,11 @@ import { MatIconModule } from '@angular/material/icon';
 import { HomeComponent } from './Views/home/home.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { ShippingCarComponent } from './Views/shipping-car/shipping-car.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { MatTableModule } from '@angular/material/table';
+import { MatListModule } from '@angular/material/list';
+import { JwtInterceptorInterceptor } from './jwt-interceptor.interceptor';
+import { CookieService } from 'ngx-cookie-service';
 
 @NgModule({
   declarations: [
@@ -38,9 +41,14 @@ import { MatTableModule } from '@angular/material/table';
     MatToolbarModule,
     ReactiveFormsModule,
     MatTableModule,
+    MatListModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [{
+    provide: HTTP_INTERCEPTORS,
+    useClass: JwtInterceptorInterceptor,
+    multi: true
+  },CookieService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,31 +1,13 @@
-
-  <table mat-table [dataSource]="dataSource" class="demo-table">
-    <!-- Position Column -->
-    <ng-container matColumnDef="id">
-      <th mat-header-cell *matHeaderCellDef>No.</th>
-      <td mat-cell *matCellDef="let element">{{element.id}}</td>
-    </ng-container>
-
-    <!-- Name Column -->
-    <ng-container matColumnDef="description">
-      <th mat-header-cell *matHeaderCellDef>Description</th>
-      <td mat-cell *matCellDef="let element">{{element.description}}</td>
-    </ng-container>
-
-    <!-- Weight Column -->
-    <ng-container matColumnDef="price">
-      <th mat-header-cell *matHeaderCellDef>Price</th>
-      <td mat-cell *matCellDef="let element">{{element.price}}</td>
-    </ng-container>
-
-    <!-- Symbol Column -->
-    <ng-container matColumnDef="stock">
-      <th mat-header-cell *matHeaderCellDef>Stock</th>
-      <td mat-cell *matCellDef="let element">{{element.stock}}</td>
-    </ng-container>
-
-    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
-    <mat-row matRipple *matRowDef="let row; columns: displayedColumns;"></mat-row>
-
-  </table>
-
+<h1>Carrito</h1>
+<mat-list>
+  <mat-list-item *ngFor="let item of dataSource">
+    <mat-icon mat-list-icon>shopping_cart</mat-icon>
+    <div mat-line>{{item.id}} - {{item.description}} </div>
+    <div><button (click)="eliminate(item.id)" mat-raised-button color="warn">Eliminar</button></div>
+    <div mat-line>Precio: ${{item.price}}</div>
+    <mat-divider></mat-divider>
+  </mat-list-item>
+</mat-list>
+<br>
+<button *ngIf="holow" (click)="pay()" style="float: right; margin-right: 20px;" mat-raised-button color="accent">Pagar</button>
+<h2 *ngIf="!holow">No se encontraron resultados</h2>
