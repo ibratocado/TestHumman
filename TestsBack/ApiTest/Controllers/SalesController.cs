@@ -14,7 +14,7 @@ using ModelTest.Models;
 namespace ApiTest.Controllers
 {
     [Route("api/[controller]")]
-    //[Authorize]
+    [Authorize]
     [ApiController]
     public class SalesController : ControllerBase
     {

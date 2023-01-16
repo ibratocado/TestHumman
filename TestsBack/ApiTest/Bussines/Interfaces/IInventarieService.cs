@@ -15,6 +15,6 @@ namespace ModelTest.Bussines.Interfaces
         Task<int> AddInventarie(RequestInventarie data);
         Task<int> UpdateInventarie(RequestInventarieUpdate data);
         Task<int> DeleteInventarie(int id);
-        Task<List<ResponArticle>> GetArticlesState();
+        Task<ResponArticle> GetArticlesState(int id);
     }
 }

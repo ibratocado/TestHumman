@@ -2,13 +2,15 @@ import { Injectable } from '@angular/core';
 import { ActivatedRouteSnapshot, CanActivate, Router, RouterStateSnapshot, UrlTree } from '@angular/router';
 import { CookieService } from 'ngx-cookie-service';
 import { Observable } from 'rxjs';
+import { AppComponent } from '../app.component';
 
 @Injectable({
   providedIn: 'root'
 })
 export class GuardSessionGuard implements CanActivate {
   constructor(private serviceCokie: CookieService,
-    private router: Router){}
+    private router: Router
+    ){}
   canActivate(
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
@@ -17,6 +19,7 @@ export class GuardSessionGuard implements CanActivate {
         this.router.navigate(['/']);
       }
       else{
+
         return true;
       }
     return false;

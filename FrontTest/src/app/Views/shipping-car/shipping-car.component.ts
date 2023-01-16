@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { IArticlesData } from 'src/app/Interfaces/iinventaries';
 import { ISalesRequest } from 'src/app/Interfaces/isales';
+import { GenericService } from 'src/app/Services/generic.service';
 import { InventarieService } from 'src/app/Services/inventarie.service';
 import { SalesService } from 'src/app/Services/sales.service';
 
@@ -13,7 +14,8 @@ export class ShippingCarComponent implements OnInit {
   public dataSource: IArticlesData[] = [];
   public holow: boolean = true;
   constructor(private salesService: SalesService,
-    private inevntarieService: InventarieService) {
+    private inevntarieService: InventarieService,
+    private generalService: GenericService) {
 
     this.assignamente();
   }
@@ -45,13 +47,16 @@ export class ShippingCarComponent implements OnInit {
           clientId: 1,
           pieces: 1
         };
-        this.salesService.PostSales(model).then(i=> console.log(i.respon.message)).catch(err=> console.log(err));
+        this.salesService.PostSales(model).then(
+          i=> {
+            this.generalService.openSnackBar(i.respon.message,"Add");
+            this.dataSource = [];
+            localStorage.setItem('shippinCar',JSON.stringify(this.dataSource));
+            this.assignamente();
+          }).catch(
+            err=> this.generalService.openSnackBar(err.error.repon.message || "No Conecction","Error"));
       }
     );
-
-    this.dataSource = [];
-    localStorage.setItem('shippinCar',JSON.stringify(this.dataSource));
-    this.assignamente();
   }
 
 }

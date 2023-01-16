@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { lastValueFrom } from 'rxjs';
 import { environment } from 'src/environments/environment';
 
@@ -8,7 +9,8 @@ import { environment } from 'src/environments/environment';
 })
 export class GenericService {
   private path = environment.url.urlApi;
-  constructor(private clientHttp: HttpClient) { }
+  constructor(private clientHttp: HttpClient,
+    private _snackBar: MatSnackBar) { }
 
   get(url: string): Promise<any>{
     return lastValueFrom( this.clientHttp.get(this.path + url));
@@ -24,5 +26,9 @@ export class GenericService {
 
   delete(url: string): Promise<any>{
     return lastValueFrom( this.clientHttp.delete(this.path + url));
+  }
+
+  openSnackBar(message: string, action: string) {
+    this._snackBar.open(message, action,{duration: 2000});
   }
 }

@@ -117,22 +117,21 @@ namespace ModelTest.Bussines
             return 0;
         }
 
-        public async Task<List<ResponArticle>> GetArticlesState()
+        public async Task<ResponArticle> GetArticlesState(int id)
         {
-            List<ResponArticle> final = new List<ResponArticle>();
-            var articles = await _context.Articles.ToListAsync();
+            ResponArticle final = new ResponArticle();
+            var articles = await _context.Articles.FindAsync(id);
                 
-            foreach (var item in articles)
+            if(articles != null)
             {
-                var article = new ResponArticle()
+                final = new ResponArticle()
                 {
-                    id = item.Id,
-                    description = item.Description,
-                    price = item.Price,
-                    image = item.Image,
-                    stock = item.Stock
+                    id = articles.Id,
+                    description = articles.Description,
+                    price = articles.Price,
+                    image = articles.Image,
+                    stock = articles.Stock
                 };
-                final.Add(article);
             }
             return final;
         }

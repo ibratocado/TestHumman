@@ -1,14 +1,14 @@
-<mat-toolbar color="primary">
+<mat-toolbar *ngIf="tok" color="primary">
   <div class="content-menu">
     <div></div>
     <div class="content-options">
-      <button [routerLink]="['./Home']" class="button-style" mat-button>Home</button>
+      <button [routerLink]="['./Log/Home']" class="button-style" mat-button>Home</button>
 
       <span class="example-spacer"></span>
     </div>
 
     <div class="content-end">
-      <button [routerLink]="['./Car']" mat-icon-button>
+      <button [routerLink]="['./Log/Car']" mat-icon-button>
         <mat-icon>shopping_cart</mat-icon>
       </button>
     </div>

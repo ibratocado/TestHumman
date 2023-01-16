@@ -1,14 +1,14 @@
 <mat-card class="matcard-style" *ngIf="data!=undefined">
   <mat-card-header>
       <mat-card-title>
-          <a class="link-style" href="">{{data.id}}.{{data.store}} - {{data.description}} </a>
+          <p class="link-style" >{{data.id}}.{{data.store}} - {{data.description}} </p>
       </mat-card-title>
       <mat-card-subtitle>
         Piezs: {{data.stock}} <br> Precio: ${{data.price}}
       </mat-card-subtitle>
   </mat-card-header>
   <mat-card-content class="content-style">
-      <img class="img-style" alt="{{data.image}}">
+      <img class="img-style" src="{{data.image}}">
   </mat-card-content>
   <mat-card-footer class="footer-style">
       <button (click)="addCar()" mat-flat-button color="accent">

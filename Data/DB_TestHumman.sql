@@ -84,5 +84,13 @@ CREATE TRIGGER triUpdateInventaryPieces
 			ON inserted.inventaryId = inventary.id
 			INNER JOIN articles 
 			ON inventary.articleId = articles.id);
-		UPDATE articles SET stock = @stock WHERE @idArticle = id;
+		if(@stock > 0)
+			BEGIN
+				UPDATE articles SET stock = @stock WHERE @idArticle = id;
+			END
+		ELSE
+			BEGIN
+				UPDATE articles SET state = 0 WHERE @idArticle = id;
+			END
+			
 	END	

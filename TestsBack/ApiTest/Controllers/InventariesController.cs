@@ -14,7 +14,7 @@ using ModelTest.Models;
 namespace ApiTest.Controllers
 {
     [Route("api/[controller]")]
-    //[Authorize]
+    [Authorize]
     [ApiController]
     public class InventariesController : ControllerBase
     {
@@ -29,7 +29,7 @@ namespace ApiTest.Controllers
 
         [HttpGet]
         [Route("articles")]
-        public async Task<IActionResult> GetArticles()
+        public async Task<IActionResult> GetArticles(int id)
         {
             ResponGeneral respon = responBad();
             try
@@ -38,7 +38,7 @@ namespace ApiTest.Controllers
                 {
                     status = StatusCodes.Status200OK,
                     message = "Consultado correctamente",
-                    data = await _inventarieService.GetArticlesState()
+                    data = await _inventarieService.GetArticlesState(id)
                 };
 
                 return StatusCode(respon.status, new { respon = respon });

@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { IArticlesData } from 'src/app/Interfaces/iinventaries';
+import { GenericService } from 'src/app/Services/generic.service';
 
 @Component({
   selector: 'app-gen-card-product',
@@ -9,7 +10,7 @@ import { IArticlesData } from 'src/app/Interfaces/iinventaries';
 export class GenCardProductComponent implements OnInit {
 
   @Input() public data: IArticlesData | undefined;
-  constructor() { }
+  constructor(private genericService: GenericService) { }
 
   ngOnInit(): void {
   }
@@ -17,6 +18,7 @@ export class GenCardProductComponent implements OnInit {
   public addCar(){
     let car = localStorage.getItem('shippinCar');
 
+    this.genericService.openSnackBar("Agregado","Shipping");
     if(car && this.data){
       let ship: IArticlesData[] = JSON.parse(car);
       console.log(ship);

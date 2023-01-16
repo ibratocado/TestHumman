@@ -2,7 +2,7 @@
 <mat-list>
   <mat-list-item *ngFor="let item of dataSource">
     <mat-icon mat-list-icon>shopping_cart</mat-icon>
-    <div mat-line>{{item.id}} - {{item.description}} </div>
+    <div mat-line>{{item.id}}.{{item.store}} - {{item.description}} </div>
     <div><button (click)="eliminate(item.id)" mat-raised-button color="warn">Eliminar</button></div>
     <div mat-line>Precio: ${{item.price}}</div>
     <mat-divider></mat-divider>

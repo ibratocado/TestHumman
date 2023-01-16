@@ -20,6 +20,7 @@ import { MatTableModule } from '@angular/material/table';
 import { MatListModule } from '@angular/material/list';
 import { JwtInterceptorInterceptor } from './jwt-interceptor.interceptor';
 import { CookieService } from 'ngx-cookie-service';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 @NgModule({
   declarations: [
@@ -42,6 +43,7 @@ import { CookieService } from 'ngx-cookie-service';
     ReactiveFormsModule,
     MatTableModule,
     MatListModule,
+    MatSnackBarModule,
     HttpClientModule
   ],
   providers: [{
